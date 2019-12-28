@@ -16,7 +16,7 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
-<div class="wrapper">
+<div class="wrapper" id="app">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
@@ -74,7 +74,7 @@
           <li class="nav-item">
 
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>              
+              <i class="nav-icon fas fa-th"></i>
               <p>Category</p>
             </a>
           </li>
@@ -125,15 +125,15 @@
           Start creating your amazing application!
         </div>
         <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
+        <div class="card-footer"> Footer<div>
         <!-- /.card-footer-->
       </div>
       <!-- /.card -->
 
     </section>
     <!-- /.content -->
+    <!-- mount component here -->
+
   </div>
   <!-- /.content-wrapper -->
 
