@@ -52749,9 +52749,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var routes = [{
   path: '/home',
+  name: 'AdminHome',
   component: _components_admin_AdminHome_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
 }, {
   path: '/post',
+  name: 'Ex',
   component: _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
 }];
 
