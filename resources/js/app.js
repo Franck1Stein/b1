@@ -16,12 +16,13 @@ Vue.use(VueRouter)
 
 
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
+  Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+  Vue.component('home', require('./components/admin/AdminHome.vue').default);
+  Vue.component('admin-main', require('./components/admin/AdminMain.vue').default);
 
 const router = new VueRouter({
   routes, // short for `routes: routes`
-
+  mode: 'history'
 })
 
 /**
