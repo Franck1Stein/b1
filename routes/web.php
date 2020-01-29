@@ -1,11 +1,18 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
+   Route::get('/', function () {
+      return view('welcome');
+   });
 
-Auth::routes();
+   Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+   Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/{anypath}', 'HomeController@index')->where('path','.*');
+   Auth::routes();
+
+   Route::get('/home', 'HomeController@index')->name('home');
+
+   Route::post('post', 'PostController@all_post');
+
+
+// Route::get('/{anypath}', 'HomeController@index')->where('path','.*');

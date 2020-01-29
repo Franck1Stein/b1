@@ -12,11 +12,10 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('css/app.css') }}" >
   <!-- Google Font: Source Sans Pro -->
-
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
-<div class="wrapper" id="app">
+<div id="app" class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
@@ -62,24 +61,21 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview">
-            <router-link to = "/home" class="nav-link">
+            <router-link :to="{ name: 'AdminHome' }" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-th"></i>
-              </p>
+              <p>Dashboard</p>
             </router-link>
 
           </li>
           <li class="nav-item">
 
-            <a href="../widgets.html" class="nav-link">
+            <router-link :to="{ name: 'Ex' }" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Category</p>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <router-link to = "/post" class="nav-link">
+            <router-link :to="{ name: 'Ex' }" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Post</p>
             </router-link>
@@ -94,8 +90,8 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 
-      <admin-main></admin-main>
 
+    <admin-main></admin-main>
   </div>
   <!-- /.content-wrapper -->
 
