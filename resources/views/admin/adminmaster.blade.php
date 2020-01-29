@@ -69,7 +69,7 @@
           </li>
           <li class="nav-item">
 
-            <router-link :to="{ name: 'Ex' }" class="nav-link">
+            <router-link :to="{ name: 'CategoryList' }" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Category</p>
             </router-link>
