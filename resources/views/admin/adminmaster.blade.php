@@ -75,7 +75,7 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'Ex' }" class="nav-link">
+            <router-link :to="{ name: 'AdminHome' }" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Post</p>
             </router-link>
