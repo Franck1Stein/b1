@@ -9,7 +9,6 @@
                           <h3 class="card-title">Edit Category</h3>
                       </div>
                       <form role="form" @submit.prevent="updateCategory()">
-
                         <div class="card-body">
                           <div class="form-group">
                             <label for="CategoryId">Edit Category</label>
@@ -51,7 +50,6 @@
         }
     },
     methods: {
-
         updateCategory () {
           this.form.post('`/update-category/${this.$route.params.categoryid}`')
               .then( (response) => {
