@@ -34,31 +34,23 @@ class CategoryController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function delete_category($id)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $category = Category::find($id);
+        $category->delete();
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit_category ($id)
     {
-        //
+        $category = Category::find($id);
+        return response()->json([
+            'category' => $category
+        ], 200);
     }
 
     /**
@@ -68,19 +60,15 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update_category(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+          'cat_name' => 'required|min:2|max:50'
+        ]);
+        
+        $category = Category::find($id);
+        $category->cat_name = $request->cat_name;
+        $category->save();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
