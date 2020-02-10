@@ -1,37 +1,62 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
 
 require('./bootstrap');
 window.Vue = require('vue');
 
-import VueRouter from 'vue-router'
-//import Vuex from 'vuex'
-import {routes} from './routes'
+  // vue router
+  import VueRouter from 'vue-router';
+  Vue.use(VueRouter)
 
-Vue.use(VueRouter)
-//Vue.use(Vuex)
+  // Support vuex
+  import Vuex from 'vuex';
+  Vue.use(Vuex)
+
+  import storeData from "./store/index";
+
+  const store = new Vuex.Store(
+      storeData
+  )
+  // support moment.js
+  import {filter} from './filter';
+
+  // vue router
+  import {routes} from './routes';
 
 
+   Vue.component('AdminHome', require('./components/admin/AdminHome.vue').default);
+   Vue.component('admin-main', require('./components/admin/AdminMaster.vue').default);
 
-   Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-   Vue.component('home', require('./components/admin/AdminHome.vue').default);
-   Vue.component('admin-main', require('./components/admin/AdminMain.vue').default);
+  // v-form
+  import { Form, HasError, AlertError, AlertErrors, AlertSuccess } from 'vform';
+   Vue.component(HasError.name, HasError)
+   Vue.component(AlertError.name, AlertError)
+   Vue.component(AlertErrors.name, AlertErrors)
+   Vue.component(AlertSuccess.name, AlertSuccess)
+   window.Form = Form;
+
+   // Sweet Alert 2
+  import swal from 'sweetalert2';
+   window.swal = swal;
+
+    const toast = swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
+
+    toast.fire({
+      icon: 'success',
+      title: 'Added successfully'
+    });
+    window.toast = toast
 
   const router = new VueRouter({
-  routes, // short for `routes: routes`
-  mode: 'history'
-})
+    routes, // short for `routes: routes`
+    mode: 'hash'
+  });
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-const app = new Vue({
-    el: '#app',
-    router
-});
+  const app = new Vue({
+      el: '#app',
+      router,
+      store
+  });
