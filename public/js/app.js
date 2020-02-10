@@ -87,7 +87,10 @@
 /******/ ({
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> dev
 /***/ "./node_modules/admin-lte/dist/js/adminlte.min.js":
 /*!********************************************************!*\
   !*** ./node_modules/admin-lte/dist/js/adminlte.min.js ***!
@@ -75309,6 +75312,7 @@ function resetStoreVM (store, state, hot) {
 function installModule (store, rootState, path, module, hot) {
   var isRoot = !path.length;
   var namespace = store._modules.getNamespace(path);
+<<<<<<< HEAD
 
   // register in namespace map
   if (module.namespaced) {
@@ -75318,6 +75322,17 @@ function installModule (store, rootState, path, module, hot) {
     store._modulesNamespaceMap[namespace] = module;
   }
 
+=======
+
+  // register in namespace map
+  if (module.namespaced) {
+    if (store._modulesNamespaceMap[namespace] && "development" !== 'production') {
+      console.error(("[vuex] duplicate namespace " + namespace + " for the namespaced module " + (path.join('/'))));
+    }
+    store._modulesNamespaceMap[namespace] = module;
+  }
+
+>>>>>>> dev
   // set state
   if (!isRoot && !hot) {
     var parentState = getNestedState(rootState, path.slice(0, -1));
@@ -75830,12 +75845,17 @@ module.exports = function(module) {
   \*****************************/
 /*! no exports provided */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ (function(module, exports) {
 
 throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\b1\\package.json: Error while parsing JSON - Unexpected token < in JSON at position 853\n    at JSON.parse (<anonymous>)\n    at readConfigPackage (C:\\xampp\\htdocs\\b1\\node_modules\\@babel\\core\\lib\\config\\files\\package.js:57:20)\n    at C:\\xampp\\htdocs\\b1\\node_modules\\@babel\\core\\lib\\config\\files\\utils.js:29:12\n    at cachedFunction (C:\\xampp\\htdocs\\b1\\node_modules\\@babel\\core\\lib\\config\\caching.js:32:19)\n    at findPackageData (C:\\xampp\\htdocs\\b1\\node_modules\\@babel\\core\\lib\\config\\files\\package.js:33:11)\n    at buildRootChain (C:\\xampp\\htdocs\\b1\\node_modules\\@babel\\core\\lib\\config\\config-chain.js:105:85)\n    at loadPrivatePartialConfig (C:\\xampp\\htdocs\\b1\\node_modules\\@babel\\core\\lib\\config\\partial.js:85:55)\n    at Object.loadPartialConfig (C:\\xampp\\htdocs\\b1\\node_modules\\@babel\\core\\lib\\config\\partial.js:110:18)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\b1\\node_modules\\babel-loader\\lib\\index.js:144:26)\n    at Generator.next (<anonymous>)\n    at asyncGeneratorStep (C:\\xampp\\htdocs\\b1\\node_modules\\babel-loader\\lib\\index.js:3:103)\n    at _next (C:\\xampp\\htdocs\\b1\\node_modules\\babel-loader\\lib\\index.js:5:194)\n    at C:\\xampp\\htdocs\\b1\\node_modules\\babel-loader\\lib\\index.js:5:364\n    at new Promise (<anonymous>)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\b1\\node_modules\\babel-loader\\lib\\index.js:5:97)\n    at Object.loader (C:\\xampp\\htdocs\\b1\\node_modules\\babel-loader\\lib\\index.js:60:18)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\b1\\node_modules\\babel-loader\\lib\\index.js:55:12)");
 =======
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+>>>>>>> dev
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
@@ -76364,6 +76384,9 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 
 /***/ }),
