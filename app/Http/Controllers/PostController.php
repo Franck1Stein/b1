@@ -10,19 +10,28 @@ class PostController extends Controller
 {
     public function all_post() {
 
-      $category = Category::with('posts')->get();
+      $posts = Post::all();
 
-      return $category;
+      return response()->json([
+          'posts' => $posts
+      ], 200);
     }
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * add Post
      */
-    public function index()
+    public function add_post(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|min:2|max:50',
+            'description' => 'required|min:2|max:1000'
+        ]);
+
+        $strpos = strpos($request->photo, ';');
+        $sub = substr($request->photo,0,$strpos);
+        $ex = explode('/', $sub)(1);
+
+        $img = Image::make($request->photo->resize(200, 200));
     }
 
     /**

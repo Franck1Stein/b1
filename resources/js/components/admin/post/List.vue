@@ -39,14 +39,14 @@
 
                         <tbody>
 
-                            <tr >
+                            <tr v-for="(post,index) in allpost">
 
-                              <td>1</td>
+                              <td>{{ index+1 }}</td>
                               <td>User Name</td>
                               <td>Category Name</td>
-                              <td>Post Title</td>
-                              <td>Post Description</td>
-                              <td>Picture</td>
+                              <td>{{ post.title }}</td>
+                              <td>{{ post.description }}</td>
+                              <td><img :src="post.photo" alt="" width="40" height="50"></td>
                               <td>
 
                                 <a href="">Edit</a>
@@ -77,7 +77,18 @@
 
 <script>
     export default {
-        name: "List"
+        name: "List",
+        mounted() {
+          this.$store.dispatch('getAllPost')
+        },
+        computed: {
+            allpost() {
+              return this.$store.getters.getAllPost
+            }
+        },
+        methods: {
+
+        }
     }
 </script>
 
