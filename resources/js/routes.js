@@ -4,6 +4,11 @@ import CategoryList from './components/admin/category/List.vue'
 import AddCategory from './components/admin/category/New.vue'
 import EditCategory from './components/admin/category/Edit.vue'
 
+//Post
+import PostList from './components/admin/post/List.vue'
+import AddPost from './components/admin/post/New.vue'
+import EditPost from './components/admin/post/Edit.vue'
+
 export let routes = [
   {
     path: '/home',
@@ -24,6 +29,23 @@ export let routes = [
     path: '/edit-category/:categoryid',
     name: 'EditCategory',
     component: EditCategory
+  },
+
+  // Post
+  {
+    path: '/post-list',
+    name: 'PostList',
+    component: PostList
+  },
+  {
+    path: '/post-category',
+    name: 'AddPost',
+    component: AddPost
+  },
+  {
+    path: '/edit-category/:categoryid',
+    name: 'EditPost',
+    component: EditPost
   }
 
 ];

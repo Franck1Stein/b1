@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Category;
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
