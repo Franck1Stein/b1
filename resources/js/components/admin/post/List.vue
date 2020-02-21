@@ -13,8 +13,8 @@
 
                       <div class="card-tools">
                         <button class="btn btn-primary">
-                            <router-link :to="{ name: 'AddCategory' }" style="color:#fff">
-                                Add Post
+                            <router-link :to="{ name: 'AddPost' }" style="color:#fff">
+                                Add New Post
                             </router-link>
                         </button>
                       </div>
