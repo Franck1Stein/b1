@@ -23,3 +23,4 @@
    // Post //
 
    Route::get('/post', 'PostController@all_post');
+   Route::post('/savepost', 'PostController@save_post');

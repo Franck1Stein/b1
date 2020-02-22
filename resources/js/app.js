@@ -3,6 +3,11 @@
 require('./bootstrap');
 window.Vue = require('vue');
 
+  // editor support //
+  import 'v-markdown-editor/dist/index.css';
+  import Editor from 'v-markdown-editor'
+  Vue.use(Editor);
+
   // vue router
   import VueRouter from 'vue-router';
   Vue.use(VueRouter)
