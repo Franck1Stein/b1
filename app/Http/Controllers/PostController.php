@@ -10,8 +10,8 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function all_post() {
-
+    public function all_post()
+    {
       $posts = Post::with('user','category')->orderBy('id', 'desc')->get();
 
       return response()->json([
@@ -47,49 +47,6 @@ class PostController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -107,8 +64,30 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete_post($id)
     {
-        //
+        $post = Post::find($id);
+        $image_path = public_path()."/uploadimage/";
+        $image = $image_path. $post->photo;
+        if(file_exists($image)) {
+            @unlink($image);
+        }
+        $post->delete();
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+     public function edit_post($id)
+    {
+        $post = Post::find($id);
+
+        return response()->json([
+            'post' => $post
+        ], 200);
+
     }
 }

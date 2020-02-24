@@ -24,3 +24,5 @@
 
    Route::get('/post', 'PostController@all_post');
    Route::post('/savepost', 'PostController@save_post');
+   Route::get('/delete/{id}', 'PostController@delete_post');
+   Route::get('/post/{id}', 'PostController@edit_post');

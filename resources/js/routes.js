@@ -44,7 +44,7 @@ export let routes = [
     component: AddPost
   },
   {
-    path: '/edit-category/:categoryid',
+    path: '/edit-post/:postid',
     name: 'EditPost',
     component: EditPost
   }
