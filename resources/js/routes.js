@@ -5,6 +5,11 @@ import CategoryList from './components/admin/category/List.vue'
 import AddCategory from './components/admin/category/New.vue'
 import EditCategory from './components/admin/category/Edit.vue'
 
+// Frontend component //
+import PublicHome from './components/public/PublicHome.vue'
+import BlogPost from './components/public/blog/BlogPost.vue'
+import SinglePost from './components/public/blog/SingleBlog.vue'
+
 // Post //
 import PostList from './components/admin/post/List.vue'
 import AddPost from './components/admin/post/New.vue'
@@ -47,6 +52,24 @@ export let routes = [
     path: '/edit-post/:postid',
     name: 'EditPost',
     component: EditPost
+  },
+
+
+  // Frontend Route
+  {
+    path: '/',
+    name: 'PublicHome',
+    component: PublicHome
+  },
+  {
+    path: '/blog',
+    name: 'BlogPost',
+    component: BlogPost
+  },
+  {
+    path: '/blog/:id',
+    name: 'SinglePost',
+    component: SinglePost
   }
 
 ];

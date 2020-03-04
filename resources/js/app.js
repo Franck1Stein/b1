@@ -30,6 +30,7 @@ window.Vue = require('vue');
 
    Vue.component('AdminHome', require('./components/admin/AdminHome.vue').default);
    Vue.component('admin-main', require('./components/admin/AdminMaster.vue').default);
+   Vue.component('home-main', require('./components/public/PublicMaster.vue').default);
 
   // v-form
   import { Form, HasError, AlertError, AlertErrors, AlertSuccess } from 'vform';

@@ -111,7 +111,7 @@
                 }
             },
             updatePost () {
-                this.form.post('/savepost')
+                this.form.post(`update/${this.$route.params.postid}`)
                     .then( ()=> {
                           this.$router.push('/post-list')
 
