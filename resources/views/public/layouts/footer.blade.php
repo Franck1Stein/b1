@@ -25,16 +25,7 @@
           </ul>
         </div>
       </div>
-      <div class="span3">
-        <div class="widget">
-          <h5 class="widgetheading">Flickr photostream</h5>
-          <div class="flickr_badge">
-            <script type="text/javascript" src="https://www.flickr.com/badge_code_v2.gne?count=8&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=34178660@N03"></script>
-          </div>
-          <div class="clear">
-          </div>
-        </div>
-      </div>
+
       <div class="span3">
         <div class="widget">
           <h5 class="widgetheading">Get in touch with us</h5>
@@ -57,7 +48,7 @@
         <div class="span6">
           <div class="copyright">
             <p>
-              <span>&copy; Flattern - All right reserved.</span>
+              <span>&copy; Webx - All right reserved.</span>
             </p>
             <div class="credits">
               <!--
@@ -89,26 +80,8 @@
   <!-- javascript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/jquery.easing.1.3.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/bootstrap.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/jcarousel/jquery.jcarousel.min.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/jquery.fancybox.pack.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/jquery.fancybox-media.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/google-code-prettify/prettify.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/portfolio/jquery.quicksand.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/portfolio/setting.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/jquery.flexslider.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/jquery.nivo.slider.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/modernizr.custom.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/jquery.ba-cond.min.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/jquery.slitslider.js"></script>
-  <script src="{{asset('assets/public/asset')}}/js/animate.js"></script>
-  <script src="{{asset('js/app.js')}}"></script>
-  <!-- Template Custom JavaScript File -->
-  <script src="{{asset('assets/public/asset')}}/js/custom.js"></script>
 
-  <script>if( window.self == window.top ) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); } </script>
+  <script src="{{asset('js/app.js')}}"></script>
 
   </body>
 </html>

@@ -49,9 +49,9 @@ export default {
                    })
         },
         allcategories(context) {
-              axios.get('/categories/')
+              axios.get('/categories')
                    .then( (response) => {
-                     context.commit('allcategories',response.data.post)
+                     context.commit('allcategories',response.data.categories)
                    })
         }
     },
